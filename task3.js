@@ -26,10 +26,15 @@ const filterData = (nilaiAwal, nilaiAkhir, dataArray) => {
     })
     .sort((a, b) => a - b);
 
-  return hasil;
+  if (hasil.length) {
+    return hasil;
+  } else {
+    return "Nilai tidak ditemukan";
+  }
 };
 
-console.log(seleksiNilai(15, 3, [2, 25, 4, 14, 17, 30, 8]));
-// console.log(seleksiNilai(5, 17, [2, 25, 4]));
+// console.log(seleksiNilai(15, 3, [2, 25, 4, 14, 17, 30, 8]));
 // console.log(seleksiNilai(7, 8, undefined));
-// console.log(seleksiNilai(5, 20, [2, 25, 4, 14, 17, 30, 8]));
+// console.log(seleksiNilai(5, 17, [2, 25, 4]));
+// console.log(seleksiNilai(5, 17, [2, 25, 4, 1, 30, 18]));
+console.log(seleksiNilai(5, 20, [2, 25, 4, 14, 17, 30, 8]));
