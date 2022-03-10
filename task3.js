@@ -7,18 +7,18 @@ const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
       if (dataArray.every((item) => typeof item === "number")) {
         // validasi panjang dataArray > 5
         if (dataArray.length > 5) {
-          return filterData(nilaiAwal, nilaiAkhir, dataArray);
+          filterData(nilaiAwal, nilaiAkhir, dataArray);
         } else {
-          return "Jumlah angka dalam dataArray harus lebih dari 5";
+          console.log("Jumlah angka dalam dataArray harus lebih dari 5");
         }
       } else {
-        return "Semua elemen dalam dataArray harus bertipe number";
+        console.log("Semua elemen dalam dataArray harus bertipe number");
       }
     } else {
-      return "Parameter ketiga harus bertipe array";
+      console.log("Parameter ketiga harus bertipe array");
     }
   } else {
-    return "Nilai akhir harus lebih besar dari nilai awal";
+    console.log("Nilai akhir harus lebih besar dari nilai awal");
   }
 };
 
@@ -32,14 +32,15 @@ const filterData = (nilaiAwal, nilaiAkhir, dataArray) => {
     .sort((a, b) => a - b);
 
   if (hasil.length > 0) {
-    return hasil;
+    console.log(hasil);
+  } else {
+    console.log("Nilai tidak ditemukan");
   }
-  return "Nilai tidak ditemukan";
 };
 
-// console.log(seleksiNilai(15, 3, [2, 25, 4, 14, 17, 30, 8])); //validasi 1
-// console.log(seleksiNilai(7, 8, undefined)); // validasi 2
-// console.log(seleksiNilai(5, 17, [27, undefined, null])); // validasi 3
-// console.log(seleksiNilai(5, 17, [2, 25, 4])); // validasi 4
-// console.log(seleksiNilai(5, 17, [2, 25, 4, 1, 30, 18])); // nilai tidak ditemukan
-// console.log(seleksiNilai(5, 20, [2, 25, 4, 14, 17, 30, 8])); // berhasil
+seleksiNilai(15, 3, [2, 25, 4, 14, 17, 30, 8]); //validasi 1
+seleksiNilai(7, 8, undefined); // validasi 2
+seleksiNilai(5, 17, [27, undefined, null]); // validasi 3
+seleksiNilai(5, 17, [2, 25, 4]); // validasi 4
+seleksiNilai(5, 17, [2, 25, 4, 1, 30, 18]); // nilai tidak ditemukan
+seleksiNilai(5, 20, [2, 25, 4, 14, 17, 30, 8]); // berhasil
