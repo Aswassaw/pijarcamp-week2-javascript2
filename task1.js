@@ -25,6 +25,7 @@ console.log("");
 const warna1 = ["Goldenrod", "Skyblue", "Aquamarine"];
 const warna2 = ["Yellowgreen", "Whitesmoke", "Cornflowerblue"];
 console.log(warna1.concat(warna2));
+console.log("");
 
 // 5. replace (string)
 // Method replace digunakan untuk mencari suatu nilai pada sebuah string berdasarkan parameter pertama yang dimasukkan, lalu jika ditemukan maka string tersebut akan diubah berdasarkan parameter kedua yang dimasukkan. Bersifat case-sensitive.
@@ -48,7 +49,7 @@ console.log(string3.repeat(10));
 console.log("");
 
 // 8. startsWith (string)
-// Method startsWith digunakan untuk mengecek apakah suatu string memiliki awalan sesuai dengan parameter string yang dimasukkan.
+// Method startsWith digunakan untuk mengecek apakah suatu string memiliki awalan sesuai dengan parameter string yang dimasukkan. Bersifat case-sensitive.
 const string4 = "Kucing itu sedang berandai-andai bahwa dirinya adalah seekor harimau.";
 console.log(string4.startsWith("Kuc"));
 console.log(string4.startsWith("Kuc", 1));

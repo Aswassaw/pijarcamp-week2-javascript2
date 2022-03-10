@@ -18,15 +18,13 @@ const name = [
 ];
 
 const searchName = (searchQuery, limit, callback) => {
-  const filteredName = name.filter((item) => {
-    return item.toLowerCase().includes(searchQuery.toLowerCase());
-  });
+  const filteredName = name.filter((item) =>
+    item.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return callback(filteredName, limit);
 };
 
-const limitData = (filteredName, limit) => {
-  return filteredName.slice(0, limit);
-};
+const limitData = (filteredName, limit) => filteredName.slice(0, limit);
 
 console.log(searchName("an", 3, limitData));
